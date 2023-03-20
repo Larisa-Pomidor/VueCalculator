@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Shadows+Into+Light+Two&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+.app__inner {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.app__col {
+	width: 320px;
+}
+
+.app__banner {
+	background-position: center;
+	background-size: cover;
+}
+
+.calc {
+	border: solid 2px #0000003d;
+}
+
+.calc__inner {
+	padding: 30px;
+}
+
+.calc__title {
+	margin-bottom: 30px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.calc__name {
+	color: grey;
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+.calc__block {
+	margin-bottom: 24px;
+}
+
+.calc__check-label {
+	cursor: pointer;
+}
+
+.calc__check-name {
+	text-transform: capitalize;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.calc__block_price {
+	display: flex;
+	align-items: center;
+}
+
+.calc__check-block {
+	display: flex;
+	gap: 20px;
+}
+
+.calc__check-image {
+	width: 65px;
+	height: 65px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	background-size: cover;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.calc__check {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: black;
+	color: white;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+
+.calc__check:before {
+	position: absolute;
+	content: '✓';
+}
+
+input:checked~.calc__check {
+	opacity: 1;
+}
+
+.calc__input-line {
+	border-bottom: solid 1px silver !important;
+	width: 100%;
+	padding: 8px 13px;
+}
+
+.calc__name_price {
+	margin-bottom: 0;
+}
+
+.calc__block_price {
+	padding: 8px 13px;
+	border-radius: 5px;
+	background: #00fa281a;
+	justify-content: space-between;
+	font-weight: 500;
+}
+
+.calc__submit {
+	padding: 13px 13px;
+	background: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.calc__submit input {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@media(max-width: 670px) {
+	.app__inner {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.app__banner {
+		height: 400px;
+		order: 2;
+	}
+}
